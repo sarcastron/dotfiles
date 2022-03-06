@@ -1,0 +1,4 @@
+# ~/.config/starship.toml
+
+[gcloud]
+disabled = true

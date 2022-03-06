@@ -1,0 +1,17 @@
+alias l='ls -lh'
+alias ll='ls -lha'
+
+alias gapa='git add -p'
+alias gb='git branch'
+alias gbv='git branch -vv'
+alias gcmsg='git commit -m'
+alias gco='git checkout'
+alias gf='git fetch'
+alias gll='git pull'
+alias gst='git status'
+alias gtree='git log --graph --oneline --all'
+alias git-cull='git branch -D $(git branch -vvv |grep gone| awk "{print \$1}")'
+
+alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias now='date +%s'
+alias dpython='python -m debugpy --listen 0.0.0.0:5678 --wait-for-client'
