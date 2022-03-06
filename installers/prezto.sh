@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-if [[ "$SHELL" != *"zsh" ]]; then
-  echo "\nzsh is required. Switch your shell to zsh"
+if [[ ! -z "$ZSH_VERSION" ]]; then
+  echo "\nzsh is required. Switch your shell to zsh."
   exit
 fi
 echo "✅ Using zsh"

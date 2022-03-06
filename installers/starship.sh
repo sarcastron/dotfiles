@@ -7,11 +7,13 @@ fi
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 cat << EOM
------------------------------------------------------------
-🚀 Starship is installed. To complete the installation add
-  eval "\$(starship init zsh)"
-to your .zshrc files.
------------------------------------------------------------
+
+`blue -----------------------------------------------------------`
+  🚀 Starship is installed. To complete the installation add
+    eval "\$(starship init zsh)"
+  to your .zshrc files.
+`blue -----------------------------------------------------------`
+
 EOM
 
 grep -q "starship init zsh" ~/.zshrc
@@ -19,7 +21,7 @@ if [ $? -eq 0 ] ; then
   echo "Good news! It looks like you already have starship set up."
 else 
   # echo "Would you like me to append this line to your \`.zshrc\`?"
-  read -r "Would you like me to append this line to your \`.zshrc\`? [y/N] " response
+  read "response?Would you like me to append this line to your \`.zshrc\`? [y/N] "
   case "$response" in
     [yY]) 
       echo "\$(starship init zsh)" >> ~/.zshrc
